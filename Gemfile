@@ -3,7 +3,8 @@ source "https://gems.ruby-china.com"
 ruby RUBY_VERSION
 
 #gem "jekyll", "3.6.3"
-gem "jekyll", "~> 4.3.0"
+#gem "jekyll", "~> 3.9.2"
+gem "github-pages", "~> 227", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
