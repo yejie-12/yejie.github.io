@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2017-03-25 21:32:40 +0200
-img:
+title:  "Hello, Friends!"
+date:   2022-07-01 08:00:00 +0800
+img: yejie.jpg
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.
 categories: jekyll update
 ---
