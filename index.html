@@ -1,144 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Fresh - Free Jekyll Theme</title>
-	<meta name="description" content="">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta property="og:image" content="">
-	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
-	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#2d2a2a">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#2d2a2a">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#2d2a2a">
+---
+layout: default
+---
 
-	<link href="https://fonts.googleapis.com/css?family=Finger+Paint|PT+Sans:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="/assets/css/main.css">
-</head>
-
-<body>
-
-  <aside class="sidebar">
-
-  <div class="sidebar-container">
-    <div class="sidebar-logo">
-      <a href="/" class="logo">Fresh</a>
-    </div>
-
-    <menu class="sidebar-menu">
-      <li class="menu-items"><a class="menu-links" href="/">Home</a></li>
-      <li class="menu-items"><a class="menu-links" href="/about/">About</a></li>
-      <li class="menu-items"><a class="menu-links" href="/contact/">Contact</a></li>
-      <li class="menu-items"><a class="menu-links" href="https://github.com/artemsheludko/fresh">Github project</a></li>
-      <li class="menu-items"><a class="menu-links" href="https://github.com/artemsheludko/fresh/archive/master.zip">Download</a></li>
-    </menu>
-
-    <div class="sidebar-social">
-      <li class="social-items"><a href="https://www.facebook.com/" class="social-links"><i class="social-icons fa fa-facebook" aria-hidden="true"></i></a></li>
-      <li class="social-items"><a href="https://twitter.com/" class="social-links"><i class="social-icons fa fa-twitter" aria-hidden="true"></i></a></li>
-      <li class="social-items"><a href="https://plus.google.com/" class="social-links"><i class="social-icons fa fa-google-plus" aria-hidden="true"></i></a></li>
-      <li class="social-items"><a href="https://github.com/" class="social-links"><i class="social-icons fa fa-github" aria-hidden="true"></i></a></li>
-    </div>
-
-  </div>
-</aside>
-
-
-  <main role="main">
-    <div class="content">
-      
+{% for post in paginator.posts %}
 <article class="main-article">
   <div class="wrap-content">
     <header class="header-article">
-      <h2 class="title-article"><a href="/an-old-house/">An old house</a></h2>
-      <div class="post-date"><span>2017, Mar 30&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <h2 class="title-article"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
+      <div class="post-date"><span>{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
     </header>
-    
-       <img class="post-image" src=/assets/img/house.jpg alt="An old house">
-    
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a class="more" href="/an-old-house/">(Read more...)</a></p>
+    {% if post.img %}
+       <img class="post-image" src={{ "/assets/img/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}">
+    {% endif %}
+    <p>{{post.description}} <a class="more" href="{{post.url | prepend: site.baseurl}}">(Read more...)</a></p>
   </div>
 </article>
-
-<article class="main-article">
-  <div class="wrap-content">
-    <header class="header-article">
-      <h2 class="title-article"><a href="/zagreb-city/">Zagreb city</a></h2>
-      <div class="post-date"><span>2017, Mar 29&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
-    </header>
-    
-       <img class="post-image" src=/assets/img/zagreb_city.jpg alt="Zagreb city">
-    
-    <p>Cras ac ex sit amet leo rhoncus elementum eget eget eros. Curabitur venenatis lacus eget tempus consequat. Duis feugiat vehicula bibendum. Aliquam imperdiet tortor in diam viverra scelerisque. Vestibulum erat odio, rutrum nec volutpat et, mattis id diam. <a class="more" href="/zagreb-city/">(Read more...)</a></p>
-  </div>
-</article>
-
-<article class="main-article">
-  <div class="wrap-content">
-    <header class="header-article">
-      <h2 class="title-article"><a href="/the-white-house/">Wooden house</a></h2>
-      <div class="post-date"><span>2017, Mar 29&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
-    </header>
-    
-       <img class="post-image" src=/assets/img/wooden_house.jpg alt="Wooden house">
-    
-    <p>Phasellus tincidunt pulvinar ante, pretium pellentesque urna mollis id. Donec convallis ut elit at aliquet. Suspendisse potenti. <a class="more" href="/the-white-house/">(Read more...)</a></p>
-  </div>
-</article>
-
-<article class="main-article">
-  <div class="wrap-content">
-    <header class="header-article">
-      <h2 class="title-article"><a href="/example/">Example</a></h2>
-      <div class="post-date"><span>2017, Mar 29&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
-    </header>
-    
-    <p>You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. <a class="more" href="/example/">(Read more...)</a></p>
-  </div>
-</article>
-
-<article class="main-article">
-  <div class="wrap-content">
-    <header class="header-article">
-      <h2 class="title-article"><a href="/china-tiger-leaping-gorge/">China - tiger leaping gorge</a></h2>
-      <div class="post-date"><span>2017, Mar 29&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
-    </header>
-    
-       <img class="post-image" src=/assets/img/china_tiger_leaping_gorge.jpg alt="China - tiger leaping gorge">
-    
-    <p>Curabitur vulputate enim at metus malesuada, in iaculis nisl tincidunt. Mauris dapibus ut ante ornare ullamcorper. Vivamus ultrices erat lorem. Phasellus pretium nisl ac elit porttitor, id condimentum velit aliquam. <a class="more" href="/china-tiger-leaping-gorge/">(Read more...)</a></p>
-  </div>
-</article>
-
+{% endfor %}
 
 <div class="pagination">
-  
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="previous"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</a>
+  {% else %}
     <span class="previous"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</span>
-  
-  
-    <a href="/page2/" class="next">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-  
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="next">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+  {% else %}
+    <span class="next ">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+  {% endif %}
 </div>
-
-    </div>
-  </main>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', '', 'auto');
-  ga('send', 'pageview');
-</script>
-
-</body>
-</html>
