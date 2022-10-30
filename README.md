@@ -1,11 +1,12 @@
-Fresh is a free blog template for Jekyll
+This is Yejie
 =============================
 
-![](assets/img/fresh.jpg)
+![](assets/img/yejie.jpg)
 
 # Demo
 
-![GIF](assets/img/fresh.gif)
+<!--test-->
+ <!--![GIF](assets/img/this.gif)-->
 
 View this jekyll theme in action [here](http://artemsheludko.pw/fresh/)
 
