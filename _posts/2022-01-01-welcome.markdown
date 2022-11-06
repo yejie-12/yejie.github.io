@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Hello, Friends!"
+date:   2022-01-01 08:00:00 +0800
+img: yejie.jpg
+description: 这是我的个人空间
+categories: update
+typora-root-url: ..
+---
+这是我的个人空间，很高兴认识你。
+
+![](/assets/img/watermelon.png)
